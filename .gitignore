@@ -7,3 +7,5 @@ public/
 yarn-error.log
 .env*
 tailwind.custom.css
+.netlify/
+.docz/

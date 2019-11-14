@@ -1,0 +1,41 @@
+{
+  "name": "@krapiva-org/theme",
+  "version": "2.0.1",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "clean": "gatsby clean",
+    "type-check": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.13.50",
+    "gatsby-plugin-typescript": "^2.1.2",
+    "gatsby-theme-tailwindcss": "^1.0.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.24",
+    "@types/react-dom": "^16.8.5",
+    "babel-preset-gatsby": "^0.2.8",
+    "docz": "^2.0.0-rc.1",
+    "gatsby": "^2.3.0",
+    "gatsby-theme-docz": "^2.0.0-rc.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "@emotion/babel-preset-css-prop": "^10.0.14",
+    "@emotion/core": "^10.0.14",
+    "@emotion/styled": "^10.0.14",
+    "gatsby-image": "^2.2.9",
+    "gatsby-plugin-emotion": "^4.1.2",
+    "gatsby-plugin-typescript": "^2.1.2",
+    "gatsby-theme-tailwindcss": "^1.0.0",
+    "react-intersection-observer": "^8.24.1",
+    "react-use": "^10.5.0",
+    "uuid": "^3.3.2"
+  }
+}

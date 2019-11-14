@@ -1,62 +1,35 @@
 {
   "name": "krapiva-org",
   "description": "The culture media about Saint-Petersburg's contempotary art",
-  "version": "0.1.3",
+  "version": "2.0.1",
   "author": "Alexei Accio",
-  "dependencies": {
-    "@babel/runtime": "7.1.1",
-    "babel-plugin-tailwind": "^0.1.10",
-    "dotenv": "^6.2.0",
-    "emotion": "^9.2.8",
-    "emotion-server": "^9.2.8",
-    "gatsby": "^2.0.91",
-    "gatsby-image": "^2.0.26",
-    "gatsby-plugin-emotion": "2.0.7",
-    "gatsby-plugin-manifest": "^2.0.13",
-    "gatsby-plugin-netlify": "^2.0.6",
-    "gatsby-plugin-netlify-cache": "^1.0.0",
-    "gatsby-plugin-nprogress": "^2.0.7",
-    "gatsby-plugin-offline": "^2.0.21",
-    "gatsby-plugin-react-helmet": "^3.0.5",
-    "gatsby-plugin-sharp": "^2.0.17",
-    "gatsby-plugin-sitemap": "^2.0.4",
-    "gatsby-source-filesystem": "^2.0.16",
-    "gatsby-source-prismic": "^2.2.0",
-    "gatsby-transformer-sharp": "^2.1.0",
-    "lodash": "^4.17.11",
-    "lodash-webpack-plugin": "^0.11.5",
-    "prop-types": "^15.6.2",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "react-emotion": "^9.2.8",
-    "react-helmet": "^5.2.0",
-    "react-transition-group": "^2.5.3",
-    "recompose": "^0.30.0",
-    "tailwindcss": "^0.7.3",
-    "typograf": "^6.7.4",
-    "uuid": "^3.3.2",
-    "whatwg-fetch": "^2.0.4"
-  },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "prismic",
+    "media"
   ],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "build": "gatsby build",
-    "clear": "rimraf .cache public",
-    "develop": "gatsby develop",
-    "format": "prettier --write '**/*.js'",
-    "prebuild": "rimraf tailwind.custom.css && postcss tailwind.css -o tailwind.custom.css",
-    "predevelop": "rimraf tailwind.custom.css && postcss tailwind.css -o tailwind.custom.css",
-    "serve": "gatsby serve",
-    "start": "npm run develop",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean:theme": "yarn workspace @krapiva-org/theme clean",
+    "clean:main": "yarn workspace @krapiva-org/main clean",
+    "clean:pages": "yarn workspace @krapiva-org/pages clean",
+    "develop:theme": "yarn workspace @krapiva-org/theme develop",
+    "develop:main": "yarn workspace @krapiva-org/main develop",
+    "develop:pages": "yarn workspace @krapiva-org/pages develop",
+    "co-develop:main": "yarn workspace @krapiva-org/main co-develop",
+    "co-develop:pages": "yarn workspace @krapiva-org/pages co-develop",
+    "develop": "concurrently \"yarn co-develop:main\" \"yarn co-develop:pages\"",
+    "build:theme": "yarn workspace @krapiva-org/theme build",
+    "build:main": "yarn workspace @krapiva-org/main build",
+    "build:pages": "yarn workspace @krapiva-org/pages build",
+    "favicons": "yarn workspace @krapiva-org/utils favicons"
   },
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "devDependencies": {
-    "postcss": "^7.0.13",
-    "postcss-cli": "^6.1.1",
-    "prettier": "^1.16.0",
-    "rimraf": "^2.6.3"
+    "concurrently": "^4.1.2"
   }
 }
