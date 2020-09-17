@@ -5,7 +5,7 @@ import { translite } from '@krapiva-org/utils'
 
 import { MetaContext } from '../layout/index'
 
-import { FooterBunners } from './bunners'
+// import { FooterBunners } from './bunners'
 import { FooterNav } from './nav'
 import { footerStyles, rowStyles, blockStyles, publicStyles, linkStyles } from './styles'
 
@@ -19,7 +19,7 @@ export function Footer() {
 
   return (
     <React.Fragment>
-      <FooterBunners />
+      {/* <FooterBunners /> */}
       <footer css={footerStyles}>
         <FooterNav items={items} />
         <div css={rowStyles}>
@@ -71,17 +71,6 @@ export function Footer() {
         </div>
         <div css={rowStyles}>
           <div css={blockStyles}>
-            <span>При поддержке </span>
-            <a
-              css={linkStyles}
-              href="https://chtodelat.org/category/aid-fund-ru/?lang=ru"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              фонда взаимопомощи «что делать»
-        </a>
-          </div>
-          <div css={blockStyles}>
             <span> Разработка </span>
             <a
               css={linkStyles}
@@ -90,7 +79,7 @@ export function Footer() {
               target="_blank"
             >
               accio
-        </a>
+            </a>
           </div>
         </div>
       </footer>
